@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>اعضای هیات علمی — موبایل</title>
+
+ <!-- Bootstrap RTL -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+  <!-- فونت -->
+  <link href="https://cdn.font-store.ir/yekan-bakh/font-face.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+     :root {
+  --main-bg: #c6ddec;
+  --menu-bg: #c6ddec;
+  --accent: #2b7cff;
+  --muted: #6c757d;
+  
+}
+
+body {
+  background: var(--main-bg);
+  color: #222;
+  line-height: 1.45;
+  font-family: "Yekan Bakh"!important;
+  font-size: 15px;
+  
+}
+
+/* HEADER */
+header {
+  background: var(--main-bg);
+  border-bottom: 1px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .4rem 1rem;
+  flex-wrap: wrap;
+  background-color: #061a33d3;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+
+.date {
+  color: #444;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.login-btn {
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  border-radius: .4rem;
+  padding: .3rem .75rem;
+  font-size: .9rem;
+}
+
+/* 🌟 TOP NAV SCROLL (اصلاح‌شده) */
+.topbar-menu{
+  background: var(--menu-bg);
+  border-top: 1px solid #132f6b;
+  padding: .4rem .3rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.topbar-btn{
+  background: transparent;
+  border: 0;
+  color: #222;
+  font-weight: 500;
+  font-size: .9rem;
+  padding: .55rem .7rem;
+  display: inline-block;
+  border-radius: 8px;
+  margin-right: .2rem;
+}
+
+.topbar-btn:hover{
+  background: rgba(0,0,0,0.05);
+  color: var(--accent);
+}
+
+.topbar-btn.active{
+  background: var(--accent);
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+
+    /* --- FILTER BOX --- */
+    .filter-toggle{
+      background:#fff;border-radius:10px;padding:.65rem;
+      box-shadow:0 6px 18px rgba(11,23,50,0.05);
+      display:flex;justify-content:space-between;align-items:center;
+      margin:10px 0;
+    }
+    .filter-card{
+      background:#fff;border-radius:12px;padding:10px;
+      box-shadow:0 6px 18px rgba(11,23,50,0.05);
+    }
+
+    /* Cards grid */
+    .faculty-cards2 { display:grid; grid-template-columns: 1fr 1fr; gap:.7rem; }
+    .faculty-card2 { background:var(--card-bg); border-radius:10px; overflow:hidden; box-shadow:0 6px 18px rgba(13,27,62,0.04); display:flex; gap:.6rem; align-items:center; padding:.5rem; background-color: #fff; }
+    .faculty-card2 img { width:88px; height:88px; object-fit:cover; border-radius:8px; flex:0 0 88px; }
+    .faculty-card-body2 h3 { margin:0; font-size:1rem; }
+    .faculty-card-body2 p { margin:.2rem 0; color:var(--muted); font-size:.92rem; }
+    .faculty-card-body2 span { font-size:.86rem; color:#666; }
+
+    /* footer */
+    footer{ padding:12px 8px; text-align:center; font-size:.82rem; color:#6c757d; }
+
+   #date {
+  color: #fff;
+}
+   
+  
+
+    /* ensure images fallback nicely */
+    img { display:block; max-width:100%; height:auto; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+<header>
+  <div class="top-bar">
+   <div class="logo"> <img src="Logo1.png" alt="لوگو"> </div>
+    <div id="date" class="date"></div>
+    <button class="login-btn">ورود / ثبت‌نام</button>
+  </div>
+
+  <!-- 🌟 TOPBAR SCROLL MENU -->
+  <div class="topbar-menu">
+    <button class="topbar-btn " onclick="location.href='main-mobile.html'">صفحه اصلی</button>
+    <button class="topbar-btn" onclick="location.href='atlaseoshd-mobile.html'">اطلس مراکز رشد</button>
+    <button class="topbar-btn" onclick="location.href='atlasnoavar-mobile.html'">اطلس سراهای نوآوری</button>
+    <button class="topbar-btn" onclick="location.href='allproducts.html'">محصولات فناورانه</button>
+    <button class="topbar-btn" onclick="location.href='daneshbonyancompany-mobile.html'">شرکت‌های دانش‌بنیان</button>
+    <button class="topbar-btn " onclick="location.href='haste-mobile.html'">هسته‌ها و واحدهای فناور</button>
+    <button class="topbar-btn" onclick="location.href='fanavarevents-mobile.html'">رویدادهای فناور</button>
+    <button class="topbar-btn active" onclick="location.href='Staffs-mobile.html'">اعضای هیات علمی فناور</button>
+    <button class="topbar-btn" onclick="location.href='#'">تماس با ما</button>
+  </div>
+</header>
+
+
+     <!-- FILTER COLLAPSE TRIGGER -->
+  <div class="filter-toggle" data-bs-toggle="collapse" data-bs-target="#filterBox">
+    <div class="d-flex align-items-center gap-2">
+      <i class="fa-solid fa-filter" style="color:var(--accent)"></i>
+      <span style="font-weight:600">فیلترها و جستجو</span>
+    </div>
+    
+  </div>
+
+  <!-- COLLAPSE FILTER -->
+  <div class="collapse mb-3" id="filterBox">
+    <div class="filter-card">
+
+      <!-- Search -->
+      <input type="text" id="searchInput" class="form-control form-control-sm mb-2" placeholder="جستجو...">
+
+
+      <!-- دسته‌بندی -->
+      <div class="mb-2">
+        <div class="fw-bold mb-1">حوضه ی تخصص</div>
+        <div class="d-flex flex-wrap gap-2">
+          <label><input type="checkbox" value="تبلیغات و تولید محتوا">تبلیغات و تولید محتوا </label>
+          <label><input type="checkbox" value="نرم افزار">  نرم افزار </label>
+          <label><input type="checkbox" value="علم و فناوری">علم و فناوری</label>
+        </div>
+      </div>
+
+      <!-- واحد -->
+      <div class="mb-2">
+        <div class="fw-bold mb-1">واحد دانشگاهی</div>
+        <select class="form-select form-select-sm">
+          <option>همه واحدها</option>
+          <option>تهران مرکز</option>
+          <option>تهران شمال</option>
+          <option> علم و فناوری</option>
+        </select>
+      </div>
+
+      <button id="applyFilter" class="btn btn-primary btn-sm w-100 mt-2">اعمال فیلتر</button>
+
+    </div>
+  </div>
+
+
+      <!-- Faculty cards -->
+      <section class="faculty-cards2" id="cardsContainer">
+
+        <!-- Example card templates (kept content) -->
+        <article class="faculty-card2">
+          <img src="https://icons-for-free.com/iff/png/512/avatar+person+profile+user+icon-1320166578424287581.png" alt="عضو هیات علمی" onerror="this.src=placeholderImg">
+          <div class="faculty-card-body2">
+            <h3 class="name">نوید صفرزاده</h3>
+            <p class="role">تبلیغات و محتوا</p>
+            <span class="unit">نام واحد دانشگاهی: لورم ایپسوم</span>
+          </div>
+        </article>
+
+        <article class="faculty-card2">
+          <img src="https://icons-for-free.com/iff/png/512/avatar+person+profile+user+icon-1320166578424287581.png" alt="عضو هیات علمی" onerror="this.src=placeholderImg">
+          <div class="faculty-card-body2">
+            <h3 class="name">نوید صفرزاده</h3>
+            <p class="role">تبلیغات و محتوا</p>
+            <span class="unit">نام واحد دانشگاهی: لورم ایپسوم</span>
+          </div>
+        </article>
+
+        <article class="faculty-card2">
+          <img src="https://icons-for-free.com/iff/png/512/avatar+person+profile+user+icon-1320166578424287581.png" alt="عضو هیات علمی" onerror="this.src=placeholderImg">
+          <div class="faculty-card-body2">
+            <h3 class="name">نوید صفرزاده</h3>
+            <p class="role">تبلیغات و محتوا</p>
+            <span class="unit">نام واحد دانشگاهی: لورم ایپسوم</span>
+          </div>
+        </article>
+<article class="faculty-card2">
+          <img src="https://icons-for-free.com/iff/png/512/avatar+person+profile+user+icon-1320166578424287581.png" alt="عضو هیات علمی" onerror="this.src=placeholderImg">
+          <div class="faculty-card-body2">
+            <h3 class="name">نوید صفرزاده</h3>
+            <p class="role">تبلیغات و محتوا</p>
+            <span class="unit">نام واحد دانشگاهی: لورم ایپسوم</span>
+          </div>
+        </article>
+
+         <article class="faculty-card2">
+          <img src="https://icons-for-free.com/iff/png/512/avatar+person+profile+user+icon-1320166578424287581.png" alt="عضو هیات علمی" onerror="this.src=placeholderImg">
+          <div class="faculty-card-body2">
+            <h3 class="name">نوید صفرزاده</h3>
+            <p class="role">تبلیغات و محتوا</p>
+            <span class="unit">نام واحد دانشگاهی: لورم ایپسوم</span>
+          </div>
+        </article>
+
+         <article class="faculty-card2">
+          <img src="https://icons-for-free.com/iff/png/512/avatar+person+profile+user+icon-1320166578424287581.png" alt="عضو هیات علمی" onerror="this.src=placeholderImg">
+          <div class="faculty-card-body2">
+            <h3 class="name">نوید صفرزاده</h3>
+            <p class="role">تبلیغات و محتوا</p>
+            <span class="unit">نام واحد دانشگاهی: لورم ایپسوم</span>
+          </div>
+        </article>
+
+         <article class="faculty-card2">
+          <img src="https://icons-for-free.com/iff/png/512/avatar+person+profile+user+icon-1320166578424287581.png" alt="عضو هیات علمی" onerror="this.src=placeholderImg">
+          <div class="faculty-card-body2">
+            <h3 class="name">نوید صفرزاده</h3>
+            <p class="role">تبلیغات و محتوا</p>
+            <span class="unit">نام واحد دانشگاهی: لورم ایپسوم</span>
+          </div>
+        </article>
+        <!-- More cards can be dynamically added -->
+      </section>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+ <footer>
+    <div class="container">
+      <div class="mb-2">
+        <i class="fa-brands fa-instagram mx-1"></i>
+        <i class="fa-brands fa-telegram mx-1"></i>
+        <i class="fa-brands fa-linkedin mx-1"></i>
+      </div>
+      <div style="font-size:.85rem; color:#6c757d">&copy; ۱۴۰۴ | کلیه حقوق محفوظ است.</div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Placeholder image (inline SVG) used when local images missing
+    const placeholderImg = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400"><rect width="100%" height="100%" fill="%23f2f4f8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="%239aa0b2" font-size="18">تصویر موجود نیست</text></svg>';
+
+    // Date display (mobile and desktop)
+    (function(){
+      const el = document.getElementById('date');
+      const elLg = document.getElementById('date-lg');
+      if(!el) return;
+      function render(){
+        const now = new Date();
+        const days = ['یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنج‌شنبه','جمعه','شنبه'];
+        const txt = days[now.getDay()] + ' - ' + now.toLocaleDateString('fa-IR');
+        el.textContent = txt;
+        if(elLg) elLg.textContent = txt;
+      }
+      render();
+      setInterval(render, 60000);
+    })();
+
+    // Filter toggle & clear
+    document.addEventListener('DOMContentLoaded', function(){
+      const toggleBtn = document.querySelector('.filter-toggle');
+      const filterContent = document.getElementById('filterContent');
+      const clearBtn = document.querySelector('.clear-filters');
+
+      toggleBtn && toggleBtn.addEventListener('click', () => {
+        filterContent.classList.toggle('active');
+        // scroll into view on mobile when opening
+        if(filterContent.classList.contains('active')) filterContent.scrollIntoView({behavior:'smooth', block:'center'});
+      });
+
+      clearBtn && clearBtn.addEventListener('click', () => {
+        filterContent.querySelectorAll('input[type="checkbox"]').forEach(ch => ch.checked = false);
+      });
+
+      // wire up search (client-side filter)
+      document.getElementById('searchInput').addEventListener('input', handleSearchInput);
+    });
+
+    // Simple client-side search (filters cards by name or role or unit)
+    function handleSearch(event){
+      if(event) event.preventDefault();
+      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      filterCards(q);
+      return false;
+    }
+    function handleSearchInput(){
+      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      filterCards(q);
+    }
+    function filterCards(q){
+      const cards = document.querySelectorAll('#cardsContainer .faculty-card2');
+      cards.forEach(card => {
+        const name = card.querySelector('.name')?.textContent?.toLowerCase() || '';
+        const role = card.querySelector('.role')?.textContent?.toLowerCase() || '';
+        const unit = card.querySelector('.unit')?.textContent?.toLowerCase() || '';
+        const show = !q || name.includes(q) || role.includes(q) || unit.includes(q);
+        card.style.display = show ? 'flex' : 'none';
+      });
+    }
+
+    // Improve touch scrolling for topbar (momentum), nothing external required
+    (function(){
+      const tb = document.querySelector('.topbar-center');
+      if(!tb) return;
+      let isDown=false, startX, scrollLeft;
+      tb.addEventListener('mousedown', (e)=>{ isDown=true; startX=e.pageX - tb.offsetLeft; scrollLeft = tb.scrollLeft; tb.classList.add('dragging'); });
+      tb.addEventListener('mouseleave', ()=>{ isDown=false; tb.classList.remove('dragging'); });
+      tb.addEventListener('mouseup', ()=>{ isDown=false; tb.classList.remove('dragging'); });
+      tb.addEventListener('mousemove', (e)=>{ if(!isDown) return; e.preventDefault(); const x = e.pageX - tb.offsetLeft; const walk = (x - startX); tb.scrollLeft = scrollLeft - walk; });
+      // touch events (mobile)
+      let tStart=0, tLeft=0;
+      tb.addEventListener('touchstart', (e)=>{ tStart = e.touches[0].pageX; tLeft = tb.scrollLeft; }, {passive:true});
+      tb.addEventListener('touchmove', (e)=>{ const dx = e.touches[0].pageX - tStart; tb.scrollLeft = tLeft - dx; }, {passive:true});
+    })();
+  </script>
+</body>
+</html>

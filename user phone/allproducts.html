@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>محصولات — اطلس فناورانه</title>
+
+  <!-- Bootstrap RTL -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+ <!-- Font & Icons -->
+ <link href="https://cdn.font-store.ir/yekan-bakh/font-face.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+     :root {
+  --main-bg: #c6ddec;
+  --menu-bg: #c6ddec;
+  --accent: #2b7cff;
+  --muted: #6c757d;
+  
+}
+
+body {
+  background: var(--main-bg);
+  color: #222;
+  line-height: 1.45;
+  font-family: "Yekan Bakh"!important;
+  font-size: 15px;
+}
+
+/* HEADER */
+header {
+  background: var(--main-bg);
+  border-bottom: 1px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .4rem 1rem;
+  flex-wrap: wrap;
+  background-color: #061a33d3;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+
+.date {
+  color: #444;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.login-btn {
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  border-radius: .4rem;
+  padding: .3rem .75rem;
+  font-size: .9rem;
+}
+
+/* 🌟 TOP NAV SCROLL (اصلاح‌شده) */
+.topbar-menu{
+  background: var(--menu-bg);
+  border-top: 1px solid #132f6b;
+  padding: .4rem .3rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.topbar-btn{
+  background: transparent;
+  border: 0;
+  color: #222;
+  font-weight: 500;
+  font-size: .9rem;
+  padding: .55rem .7rem;
+  display: inline-block;
+  border-radius: 8px;
+  margin-right: .2rem;
+}
+
+.topbar-btn:hover{
+  background: rgba(0,0,0,0.05);
+  color: var(--accent);
+}
+
+.topbar-btn.active{
+  background: var(--accent);
+  color: #ffffff !important;
+  font-weight: 600;
+}
+    /* hero banner */
+    .hero{padding:1.2rem 0;text-align:center}
+    .hero-img{max-width:980px;width:100%;height:150px;object-fit:cover;border-radius:10px;box-shadow:0 6px 18px rgba(13,27,62,0.06)}
+    .hero-title{margin-top:.8rem;font-size:1.4rem;color:var(--dark);font-weight:700}
+    /* container */
+    main{max-width:1100px;margin:1rem auto;padding:0 .8rem}
+    .controls{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-bottom:.9rem}
+    .controls .search{flex:1;min-width:150px}
+    .controls .filter-btn{white-space:nowrap}
+
+    /* filters collapse card */
+    .filter-card{background:var(--card-bg);padding:12px;border-radius:10px;box-shadow:0 8px 24px rgba(13,27,62,0.04)}
+
+    /* grid & cards */
+    .grid{display:grid;grid-template-columns:repeat(1,1fr);gap:1rem}
+    @media(min-width:576px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:992px){.grid{grid-template-columns:repeat(3,1fr)}}
+
+    .product-card{
+      background:var(--card-bg);
+      background-color: #fff;
+      border-radius:12px;
+      padding:10px;
+      box-shadow:0 8px 24px rgba(13,27,62,0.06);
+      display:flex;
+      flex-direction:column;
+      min-height:300px;
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+    .product-card:hover{ transform:translateY(-4px); box-shadow:0 14px 36px rgba(13,27,62,0.12); }
+    .product-thumb{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:.6rem}
+    .product-body{flex:1;display:flex;flex-direction:column;gap:.35rem}
+    .product-title{font-weight:800;color:var(--dark);font-size:1rem}
+    .product-meta{color:var(--muted);font-size:.88rem}
+    .product-actions{margin-top:auto;display:flex;gap:.5rem;align-items:center}
+    .btn-outline-accent{border:1px solid var(--accent);color:var(--accent);background:#fff;border-radius:8px;padding:.45rem .7rem}
+    
+
+    /* small helpers */
+    .small-muted{color:var(--muted);font-size:.85rem}
+    .chip{background:#f3f7ff;padding:.18rem .45rem;border-radius:10px;border:1px solid #e1efff;font-size:.82rem}
+
+    /* footer spacer (since no footer on page) */
+    .page-bottom-spacer{height:18px}
+   footer{ margin-top:10px; padding:12px 8px; text-align:center; font-size:.82rem; color:#6c757d; }
+
+   #date {
+  color: #fff;
+}
+    /* ensure images responsive */
+    img{display:block;max-width:100%;height:auto}
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+<header>
+  <div class="top-bar">
+    <div class="logo"> <img src="Logo1.png" alt="لوگو"> </div>
+    <div id="date" class="date"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    function updateDateTime() {
+        const now = new Date();
+        const days = ['یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنج‌شنبه','جمعه','شنبه'];
+        const dayName = days[now.getDay()];
+        const dateStr = now.toLocaleDateString('fa-IR');
+        const h = now.getHours().toString().padStart(2,'0');
+        const m = now.getMinutes().toString().padStart(2,'0');
+        document.getElementById('date').textContent = `${dayName} - ${dateStr} - ${h}:${m}`;
+    }
+
+    // اجرا فوری
+    updateDateTime();
+    // به‌روزرسانی هر ثانیه
+    setInterval(updateDateTime, 1000);
+});
+</script>
+
+    <button class="login-btn">ورود / ثبت‌نام</button>
+  </div>
+
+  <!-- 🌟 TOPBAR SCROLL MENU -->
+  <div class="topbar-menu">
+    <button class="topbar-btn " onclick="location.href='main-mobile.html'">صفحه اصلی</button>
+    <button class="topbar-btn" onclick="location.href='atlaseoshd-mobile.html'">اطلس مراکز رشد</button>
+    <button class="topbar-btn" onclick="location.href='atlasnoavar-mobile.html'">اطلس سراهای نوآوری</button>
+    <button class="topbar-btn active" onclick="location.href='allproducts.html'">محصولات فناورانه</button>
+    <button class="topbar-btn" onclick="location.href='daneshbonyancompany-mobile.html'">شرکت‌های دانش‌بنیان</button>
+    <button class="topbar-btn" onclick="location.href='haste-mobile.html'">هسته‌ها و واحدهای فناور</button>
+    <button class="topbar-btn" onclick="location.href='fanavarevents-mobile.html'">رویدادهای فناور</button>
+    <button class="topbar-btn" onclick="location.href='Staffs-mobile.html'">اعضای هیات علمی فناور</button>
+    <button class="topbar-btn" onclick="location.href='#'">تماس با ما</button>
+  </div>
+</header>
+
+  <!-- MAIN -->
+  <main>
+    <section class="hero">
+      <!-- main banner (local image uploaded earlier) -->
+      <img src="https://images.pexels.com/photos/6170458/pexels-photo-6170458.jpeg" alt="محصولات" class="hero-img">
+      <div class="hero-title">صفحه محصولات — بازار فناورانه</div>
+    </section>
+
+    <!-- Controls: search + unit + availability -->
+    <div class="controls">
+      <input id="searchInput" class="form-control search" placeholder="جستجوی نام محصول، توضیحات یا دسته..." aria-label="جستجو" />
+      <select id="unitSelect" class="form-select small-select">
+        <option value="">همه واحدها</option>
+        <option>تهران شمال</option>
+        <option>تهران مرکز</option>
+        <option>اصفهان</option>
+      </select>
+
+     
+
+      <button id="openFilters" class="btn btn-outline-secondary filter-btn">فیلترها</button>
+    </div>
+
+    <!-- collapse filters (category + price range quick) -->
+    <div id="filtersCollapse" class="collapse mb-3">
+      <div class="filter-card">
+        <div class="mb-2"><strong>دسته‌بندی</strong></div>
+        <div class="d-flex gap-2 flex-wrap mb-3">
+          <label class="form-check-label"><input type="checkbox" class="cat" value="فناوری"> فناوری</label>
+          <label class="form-check-label"><input type="checkbox" class="cat" value="دارویی"> دارویی</label>
+          <label class="form-check-label"><input type="checkbox" class="cat" value="کشاورزی"> کشاورزی</label>
+          <label class="form-check-label"><input type="checkbox" class="cat" value="محیط زیست"> محیط زیست</label>
+        </div>
+
+        <div class="mb-2">
+          <strong>قیمت (تومان)</strong>
+          <div class="d-flex gap-2 mt-2">
+            <input id="priceMin" type="number" class="form-control form-control-sm" placeholder="حداقل">
+            <input id="priceMax" type="number" class="form-control form-control-sm" placeholder="حداکثر">
+          </div>
+        </div>
+
+        <div class="mt-3 d-flex gap-2">
+          <button id="applyFilter" class="btn btn-primary">اعمال</button>
+          <button id="resetFilter" class="btn btn-outline-secondary">ریست</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- products grid -->
+    <section id="productsGrid" class="grid" aria-live="polite" aria-busy="false"></section>
+
+    <div class="page-bottom-spacer"></div>
+  </main>
+<!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="mb-2">
+        <i class="fa-brands fa-instagram mx-1"></i>
+        <i class="fa-brands fa-telegram mx-1"></i>
+        <i class="fa-brands fa-linkedin mx-1"></i>
+      </div>
+      <div style="font-size:.85rem; color:#6c757d">&copy; ۱۴۰۴ | کلیه حقوق محفوظ است.</div>
+    </div>
+  </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    /******************************************************************
+     * Data: sample products (you can replace with API fetch)
+     * Note: image paths point to uploaded files in /mnt/data
+     ******************************************************************/
+    const products = [
+      { id:1, name:'ردیاب هوشمند A1', desc:'ردیاب کوچک برای دستگاه‌های IoT با باتری طولانی', category:'فناوری', unit:'تهران شمال', available:true, price:1250000, img:'https://images.pexels.com/photos/244822/pexels-photo-244822.jpeg' },
+      { id:2, name:'کیت تشخیص دارو B2', desc:'کیت تشخیص سریع مواد دارویی و ترکیبات', category:'دارویی', unit:'تهران مرکز', available:false, price:4200000, img:'https://images.pexels.com/photos/159211/headache-pain-pills-medication-159211.jpeg' },
+      { id:3, name:'حسگر رطوبت خاک C3', desc:'حسگر دقیق برای کشاورزی هوشمند و تحلیل داده‌ها', category:'کشاورزی', unit:'اصفهان', available:true, price:650000, img:'https://images.pexels.com/photos/348689/pexels-photo-348689.jpeg' },
+      { id:4, name:'پکیج بازیافت D4', desc:'راهکارهای بازیافت و مدیریت پسماند صنعتی', category:'محیط زیست', unit:'اصفهان', available:true, price:2850000, img:'https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg' },
+      { id:5, name:'پلتفرم وب E5', desc:'سرویس مدیریت و تحلیل داده برای کسب‌وکارها', category:'فناوری', unit:'تهران شمال', available:false, price:980000, img:'https://images.pexels.com/photos/461073/pexels-photo-461073.jpeg' },
+      { id:6, name:'نانو پوشش ضدآب F6', desc:'پوشش محافظتی برای سطوح و تجهیزات حساس', category:'محیط زیست', unit:'تهران مرکز', available:true, price:1750000, img:'https://images.pexels.com/photos/1826060/pexels-photo-1826060.jpeg' },
+      { id:7, name:'حسگر کیفیت هوا G7', desc:'مانیتورینگ لحظه‌ای کیفیت هوا در محیط‌های شهری', category:'محیط زیست', unit:'اصفهان', available:false, price:1990000, img:'https://images.pexels.com/photos/2539462/pexels-photo-2539462.jpeg' }
+    ];
+
+    /******************************************************************
+     * Helpers
+     ******************************************************************/
+    function formatPrice(num){
+      return new Intl.NumberFormat('fa-IR').format(num) + ' تومان';
+    }
+
+    function debounce(fn, delay=300){
+      let t;
+      return function(...args){
+        clearTimeout(t);
+        t = setTimeout(()=> fn.apply(this, args), delay);
+      };
+    }
+
+    /******************************************************************
+     * Render products (cards)
+     ******************************************************************/
+    function renderProducts(list){
+      const target = document.getElementById('productsGrid');
+      target.setAttribute('aria-busy', 'true');
+      target.innerHTML = '';
+      if(!list.length){
+        target.innerHTML = '<div class="text-center text-muted py-4">هیچ محصولی یافت نشد.</div>';
+        target.setAttribute('aria-busy', 'false');
+        return;
+      }
+      list.forEach(p=>{
+        const card = document.createElement('article');
+        card.className = 'product-card';
+        card.innerHTML = `
+         <img src="${p.img}" alt="${p.name}" class="product-thumb"
+     onerror="this.onerror=null; this.src='fallback.png'">
+
+          <div class="product-body">
+            <div class="product-title">${p.name}</div>
+            <div class="product-meta">${p.desc}</div>
+            <div class="product-meta small-muted">دسته: ${p.category} · واحد: ${p.unit}</div>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:.6rem;margin-top:.6rem">
+              
+              <div class="chip">${formatPrice(p.price)}</div>
+            </div>
+            <div class="product-actions">
+              <a href="product-detail.html?id=${p.id}" class="btn btn-sm btn-outline-accent">مشاهده</a>
+      
+            </div>
+          </div>
+        `;
+        // accessible click: whole card goes to detail
+        card.addEventListener('click', (e)=>{
+          // avoid double-trigger when clicking a button (let links handle)
+          const tag = e.target.tagName.toLowerCase();
+          if(tag === 'a' || e.target.closest('a')) return;
+          location.href = `product-detail.html?id=${p.id}`;
+        });
+        target.appendChild(card);
+      });
+      target.setAttribute('aria-busy', 'false');
+    }
+
+    // initial render
+    renderProducts(products);
+
+    /******************************************************************
+     * Filters & Search
+     ******************************************************************/
+    function collectFilters(){
+      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      const unit = document.getElementById('unitSelect').value;
+      const avail = document.getElementById('availSelect').value; // all / available / unavailable
+      const cats = Array.from(document.querySelectorAll('.cat:checked')).map(c=>c.value);
+      const min = Number(document.getElementById('priceMin').value || 0);
+      const maxVal = document.getElementById('priceMax').value;
+      const max = maxVal === '' ? Infinity : Number(maxVal);
+      return { q, unit, avail, cats, min, max };
+    }
+
+    function applyFilters(){
+      const f = collectFilters();
+      let filtered = products.slice();
+      // search
+      if(f.q){
+        filtered = filtered.filter(p => (p.name + ' ' + p.desc + ' ' + p.category + ' ' + p.unit).toLowerCase().includes(f.q));
+      }
+      // unit
+      if(f.unit){
+        filtered = filtered.filter(p => p.unit === f.unit);
+      }
+     
+      // categories
+      if(f.cats.length) filtered = filtered.filter(p => f.cats.includes(p.category));
+      // price range
+      filtered = filtered.filter(p => p.price >= f.min && p.price <= f.max);
+      renderProducts(filtered);
+    }
+
+    // wire up events with debounce where needed
+    document.getElementById('searchInput').addEventListener('input', debounce(applyFilters, 350));
+    document.getElementById('unitSelect').addEventListener('change', debounce(applyFilters, 250));
+    document.getElementById('availSelect').addEventListener('change', debounce(applyFilters, 250));
+    document.querySelectorAll('.cat').forEach(ch => ch.addEventListener('change', debounce(applyFilters, 250)));
+    document.getElementById('priceMin').addEventListener('input', debounce(applyFilters, 350));
+    document.getElementById('priceMax').addEventListener('input', debounce(applyFilters, 350));
+    document.getElementById('applyFilter').addEventListener('click', applyFilters);
+    document.getElementById('resetFilter').addEventListener('click', ()=>{
+      document.getElementById('searchInput').value = '';
+      document.getElementById('unitSelect').value = '';
+      document.getElementById('availSelect').value = 'all';
+      document.querySelectorAll('.cat').forEach(cb=>cb.checked=false);
+      document.getElementById('priceMin').value = '';
+      document.getElementById('priceMax').value = '';
+      renderProducts(products);
+    });
+    document.getElementById('openFilters').addEventListener('click', ()=>{ const c = new bootstrap.Collapse(document.getElementById('filtersCollapse')); c.toggle(); });
+
+    /******************************************************************
+     * Accessibility & small UX
+     ******************************************************************/
+    // prevent search submit on Enter (keeps page mobile-friendly)
+    document.addEventListener('keydown', (e)=> {
+      const active = document.activeElement;
+      if(e.key === 'Enter' && active && active.id === 'searchInput') {
+        e.preventDefault();
+        applyFilters();
+      }
+    });
+    localStorage.setItem('allProducts', JSON.stringify(products));
+
+
+
+  </script>
+</body>
+</html>

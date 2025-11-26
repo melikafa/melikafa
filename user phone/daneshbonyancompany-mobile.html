@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> شزکت های دانش بنیان </title>
+
+  <!-- Bootstrap RTL -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <!-- Font & Icons -->
+ <link href="https://cdn.font-store.ir/yekan-bakh/font-face.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+     :root {
+  --main-bg: #c6ddec;
+  --menu-bg: #c6ddec;
+  --accent: #2b7cff;
+  --muted: #6c757d;
+  
+}
+
+body {
+  background: var(--main-bg);
+  color: #222;
+  line-height: 1.45;
+  font-family: "Yekan Bakh"!important;
+  font-size: 15px;
+}
+
+/* HEADER */
+header {
+  background: var(--main-bg);
+  border-bottom: 1px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .4rem 1rem;
+  flex-wrap: wrap;
+  background-color: #061a33d3;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+
+.date {
+  color: #444;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.login-btn {
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  border-radius: .4rem;
+  padding: .3rem .75rem;
+  font-size: .9rem;
+}
+
+/* 🌟 TOP NAV SCROLL (اصلاح‌شده) */
+.topbar-menu{
+  background: var(--menu-bg);
+  border-top: 1px solid #132f6b;
+  padding: .4rem .3rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.topbar-btn{
+  background: transparent;
+  border: 0;
+  color: #222;
+  font-weight: 500;
+  font-size: .9rem;
+  padding: .55rem .7rem;
+  display: inline-block;
+  border-radius: 8px;
+  margin-right: .2rem;
+}
+
+.topbar-btn:hover{
+  background: rgba(0,0,0,0.05);
+  color: var(--accent);
+}
+
+.topbar-btn.active{
+  background: var(--accent);
+  color: #ffffff !important;
+  font-weight: 600;
+}
+    /* hero banner */
+    .hero{padding:1.2rem 0;text-align:center}
+    .hero-img{max-width:980px;width:100%;height:150px;object-fit:cover;border-radius:10px;box-shadow:0 6px 18px rgba(13,27,62,0.06)}
+    .hero-title{margin-top:.8rem;font-size:1.4rem;color:var(--dark);font-weight:700}
+    /* container */
+    main{max-width:1100px;margin:1rem auto;padding:0 .8rem}
+    .controls{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-bottom:.9rem}
+    .controls .search{flex:1;min-width:150px}
+    .controls .filter-btn{white-space:nowrap}
+    /* grid */
+    .grid{display:grid;grid-template-columns:repeat(1,1fr);gap:1rem; border: #132f6b;}
+    @media(min-width:576px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:992px){.grid{grid-template-columns:repeat(3,1fr)}}
+    .product-card{background:var(--card-bg);border-radius:12px;padding:10px;box-shadow:0 8px 24px rgba(13,27,62,0.06);display:flex;flex-direction:column;min-height:270px; background-color: #fff;  border: #132f6b; box-shadow: #222; border-radius: 4%; }
+    .product-thumb{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:.6rem}
+    .product-body{flex:1;display:flex;flex-direction:column;gap:.35rem}
+    .product-title{font-weight:700;color:var(--dark);font-size:.95rem}
+    .product-meta{color:var(--muted);font-size:.85rem}
+    .product-actions{margin-top:auto;display:flex;gap:.5rem;align-items:center}
+    .btn-outline-accent{border:1px solid var(--accent);color:var(--accent);background:#fff;border-radius:8px;padding:.45rem .7rem}
+    .badge-available{color:#2f9e44;background:#e6fbef;padding:.2rem .45rem;border-radius:6px;font-size:.8rem;border:1px solid #cfeede}
+          /* footer */
+    footer{ margin-top:10px; padding:12px 8px; text-align:center; font-size:.82rem; color:#6c757d; }
+
+   #date {
+  color: #fff;
+}
+  </style>
+</head>
+<body>
+
+ <!-- HEADER -->
+<header>
+  <div class="top-bar">
+    <div class="logo"> <img src="Logo1.png" alt="لوگو"> </div>
+    <div id="date" class="date"></div>
+    <button class="login-btn">ورود / ثبت‌نام</button>
+  </div>
+
+  <!-- 🌟 TOPBAR SCROLL MENU -->
+  <div class="topbar-menu">
+    <button class="topbar-btn " onclick="location.href='main-mobile.html'">صفحه اصلی</button>
+    <button class="topbar-btn" onclick="location.href='atlaseoshd-mobile.html'">اطلس مراکز رشد</button>
+    <button class="topbar-btn" onclick="location.href='atlasnoavar-mobile.html'">اطلس سراهای نوآوری</button>
+    <button class="topbar-btn" onclick="location.href='allproducts.html'">محصولات فناورانه</button>
+    <button class="topbar-btn active" onclick="location.href='daneshbonyancompany-mobile.html'">شرکت‌های دانش‌بنیان</button>
+    <button class="topbar-btn" onclick="location.href='haste-mobile.html'">هسته‌ها و واحدهای فناور</button>
+    <button class="topbar-btn" onclick="location.href='fanavarevents-mobile.html'">رویدادهای فناور</button>
+    <button class="topbar-btn" onclick="location.href='Staffs-mobile.html'">اعضای هیات علمی فناور</button>
+    <button class="topbar-btn" onclick="location.href='#'">تماس با ما</button>
+  </div>
+</header>
+
+  <main>
+
+    <section class="hero">
+      <img src="https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg" class="hero-img">
+      <div class="hero-title" > شرکت های دانش بنیان </div>
+    </section>
+
+    <div class="controls">
+      <input id="searchInput" class="form-control search" placeholder="جستجوی محصول یا توضیحات..." />
+      <select id="unitSelect" class="form-select w-auto">
+        <option value="">همه واحدها</option>
+        <option>تهران شمال</option>
+        <option>تهران مرکز</option>
+        <option>اصفهان</option>
+      </select>
+      <button id="openFilters" class="btn btn-outline-secondary">فیلتر</button>
+    </div>
+
+    <div id="filtersCollapse" class="collapse mb-3">
+      <div class="card card-body p-3">
+        <strong>دسته‌بندی</strong>
+        <div class="d-flex gap-2 flex-wrap mb-3 mt-2">
+          <label><input type="checkbox" class="cat" value="فناوری"> فناوری</label>
+          <label><input type="checkbox" class="cat" value="دارویی"> دارویی</label>
+          <label><input type="checkbox" class="cat" value="کشاورزی"> کشاورزی</label>
+          <label><input type="checkbox" class="cat" value="محیط زیست"> محیط زیست</label>
+        </div>
+
+        <button id="applyFilter" class="btn btn-primary w-100 mb-2">اعمال فیلتر</button>
+        <button id="resetFilter" class="btn btn-outline-secondary w-100">ریست</button>
+      </div>
+    </div>
+
+    <section id="companiesList" class="grid"></section>
+
+  </main>
+<!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="mb-2">
+        <i class="fa-brands fa-instagram mx-1"></i>
+        <i class="fa-brands fa-telegram mx-1"></i>
+        <i class="fa-brands fa-linkedin mx-1"></i>
+      </div>
+      <div style="font-size:.85rem; color:#6c757d">&copy; ۱۴۰۴ | کلیه حقوق محفوظ است.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <script>
+    function debounce(fn, delay = 350) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), delay);
+  };
+}
+
+  function updateDateTime() {
+    const now = new Date();
+
+    const days = [
+      'یکشنبه',
+      'دوشنبه',
+      'سه‌شنبه',
+      'چهارشنبه',
+      'پنج‌شنبه',
+      'جمعه',
+      'شنبه'
+    ];
+
+    let dayName = days[now.getDay()];
+    let dateStr = now.toLocaleDateString('fa-IR');
+
+    // ساعت دو رقمی
+    let h = now.getHours().toString().padStart(2, '0');
+    let m = now.getMinutes().toString().padStart(2, '0');
+   
+
+    document.getElementById('date').textContent =
+      `${dayName} - ${dateStr} - ${h}:${m}`;
+  }
+
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
+
+    const companies = [
+      { id:1, title:'شرکت دانش‌بنیان آریا', desc:'فناوری اطلاعات و نرم‌افزار', unit:'تهران شمال', category:'فناوری', img:'https://images.pexels.com/photos/164572/pexels-photo-164572.jpeg' },
+      { id:2, title:'شرکت دارویی بهار', desc:'تولید مواد دارویی', unit:'تهران مرکز', category:'دارویی', img:'https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg' },
+      { id:3, title:'کشاورز نوین', desc:'کشاورزی هوشمند', unit:'اصفهان', category:'کشاورزی', img:'https://images.pexels.com/photos/96715/pexels-photo-96715.jpeg' },
+      { id:4, title:'سبز اندیش', desc:'محیط زیست و بازیافت', unit:'اصفهان', category:'محیط زیست', img:'https://images.pexels.com/photos/4668356/pexels-photo-4668356.jpeg ' },
+      { id:5, title:'توسعه وب', desc:'خدمات توسعه وب و اپ', unit:'تهران شمال', category:'فناوری', img:'https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg' }
+    ];
+
+    function debounce(fn,delay=350){
+      let t;
+      return (...args)=>{
+        clearTimeout(t);
+        t=setTimeout(()=>fn.apply(this,args),delay);
+      }
+    }
+
+    function render(list){
+      const target=document.getElementById('companiesList');
+      target.innerHTML='';
+      if(!list.length){
+        target.innerHTML='<div class="text-center text-muted py-4">موردی یافت نشد.</div>';
+        return;
+      }
+      list.forEach(c=>{
+        const div=document.createElement('div');
+        div.className="product-card";
+        div.innerHTML=`
+          <img src="${c.img}" class="product-thumb">
+          <div class="product-body">
+            <div class="product-title">${c.title}</div>
+            <div class="product-meta">${c.desc}</div>
+            <div class="product-meta">واحد: ${c.unit} · دسته: ${c.category}</div>
+            <div class="product-actions">
+              <a href="product-detail.html?id=${c.id}" class="btn btn-outline-accent btn-sm">مشاهده</a>
+              <div style="flex:1"></div>
+  
+            
+          </div>
+        `;
+        target.appendChild(div);
+      });
+    }
+
+    render(companies);
+
+    function applyFilters(){
+      const q=document.getElementById('searchInput').value.trim().toLowerCase();
+      const unit=document.getElementById('unitSelect').value;
+      const cats=[...document.querySelectorAll('.cat:checked')].map(e=>e.value);
+      let filtered=companies.slice();
+      if(q) filtered=filtered.filter(c=>(c.title + " " + c.desc).toLowerCase().includes(q));
+      if(unit) filtered=filtered.filter(c=>c.unit===unit);
+      if(cats.length) filtered=filtered.filter(c=>cats.includes(c.category));
+      render(filtered);
+    }
+
+    document.getElementById('searchInput').addEventListener('input', debounce(applyFilters,300));
+    document.getElementById('unitSelect').addEventListener('change',applyFilters);
+    document.getElementById('applyFilter').addEventListener('click',applyFilters);
+    document.getElementById('resetFilter').addEventListener('click',()=>{
+      document.getElementById('searchInput').value='';
+      document.getElementById('unitSelect').value='';
+      document.querySelectorAll('.cat').forEach(c=>c.checked=false);
+      render(companies);
+    });
+    document.getElementById('openFilters').addEventListener('click',()=>{
+      const c=new bootstrap.Collapse(document.getElementById('filtersCollapse'));
+      c.toggle();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>هسته‌ها و واحدهای فناور — نسخه موبایل</title>
+
+  <!-- Bootstrap RTL -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+  <!-- فونت و آیکن -->
+  <link href="https://cdn.font-store.ir/yekan-bakh/font-face.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+     :root {
+  --main-bg: #c6ddec;
+  --menu-bg: #c6ddec;
+  --accent: #2b7cff;
+  --muted: #6c757d;
+  
+}
+
+body {
+  background: var(--main-bg);
+  color: #222;
+  line-height: 1.45;
+  font-family: "Yekan Bakh"!important;
+  font-size: 15px;
+}
+
+/* HEADER */
+header {
+  background: var(--main-bg);
+  border-bottom: 1px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .4rem 1rem;
+  flex-wrap: wrap;
+  background-color: #061a33d3;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+
+.date {
+  color: #444;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.login-btn {
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  border-radius: .4rem;
+  padding: .3rem .75rem;
+  font-size: .9rem;
+}
+
+/* 🌟 TOP NAV SCROLL (اصلاح‌شده) */
+.topbar-menu{
+  background: var(--menu-bg);
+  border-top: 1px solid #132f6b;
+  padding: .4rem .3rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.topbar-btn{
+  background: transparent;
+  border: 0;
+  color: #222;
+  font-weight: 500;
+  font-size: .9rem;
+  padding: .55rem .7rem;
+  display: inline-block;
+  border-radius: 8px;
+  margin-right: .2rem;
+}
+
+.topbar-btn:hover{
+  background: rgba(0,0,0,0.05);
+  color: var(--accent);
+}
+
+.topbar-btn.active{
+  background: var(--accent);
+  color: #ffffff !important;
+  font-weight: 600;
+}
+    /* main layout */
+    main.container{ padding: .8rem .5rem; }
+
+    .unit-info-card{
+      display:flex;
+      gap:.6rem;
+      align-items:center;
+      background:#fff;
+      border-radius:var(--card-radius);
+      box-shadow:0 6px 18px rgba(11,23,50,0.06);
+      padding:.6rem;
+    }
+    .unit-image img{ width:96px; height:96px; object-fit:cover; border-radius:10px; }
+    .unit-details h2{ font-size:1.05rem; margin-bottom:.25rem; }
+
+    table.small-table{ width:100%; font-size:.9rem; }
+    table.small-table td{ padding:.18rem .25rem; vertical-align:top; }
+
+    /* members & stats */
+    .chart-svg{ width:90px; height:90px; display:block; margin:auto; }
+    .chart-text{ text-align:center; font-weight:700; margin-top:.4rem; }
+
+    /* similar units horizontal scroll */
+    .units-scroll{ display:flex; gap:.6rem; overflow-x:auto; padding-bottom:.5rem; -webkit-overflow-scrolling:touch; }
+    .unit-card{ min-width:200px; flex:0 0 auto; border-radius:12px; background:#fff; padding:.6rem; box-shadow:0 6px 16px rgba(10,20,40,0.04); }
+    .unit-card img{ width:100%; height:90px; object-fit:cover; border-radius:8px; }
+
+    /* footer */
+    footer{ margin-top:10px; padding:12px 8px; text-align:center; font-size:.82rem; color:#6c757d; }
+
+   #date {
+  color: #fff;
+}
+   
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="top-bar">
+     <div class="logo">
+  <img src="Logo1.png" alt="لوگو"> </div>
+    <div id="date" class="date"></div>
+    <button class="login-btn">ورود / ثبت‌نام</button>
+  </div>
+
+  <!-- 🌟 TOPBAR SCROLL MENU -->
+  <div class="topbar-menu">
+    <button class="topbar-btn" onclick="location.href='main-mobile.html'">صفحه اصلی</button>
+    <button class="topbar-btn" onclick="location.href='atlaseoshd-mobile.html'">اطلس مراکز رشد</button>
+    <button class="topbar-btn" onclick="location.href='atlasnoavar-mobile.html'">اطلس سراهای نوآوری</button>
+    <button class="topbar-btn" onclick="location.href='allproducts.html'">محصولات فناورانه</button>
+    <button class="topbar-btn" onclick="location.href='daneshbonyancompany-mobile.html'">شرکت‌های دانش‌بنیان</button>
+    <button class="topbar-btn active" onclick="location.href='haste-mobile.html'">هسته‌ها و واحدهای فناور</button>
+    <button class="topbar-btn" onclick="location.href='fanavarevents-mobile.html'">رویدادهای فناور</button>
+    <button class="topbar-btn" onclick="location.href='Staffs-mobile.html'">اعضای هیات علمی فناور</button>
+    <button class="topbar-btn" onclick="location.href='#'">تماس با ما</button>
+  </div>
+</header>
+
+    <!-- واحد / هسته -->
+    <section class="mb-3">
+      <div class="unit-info-card">
+        <div class="unit-image">
+          <!-- جایگزین شود با تصویر واقعی unit.jpg -->
+          <img src="https://images.pexels.com/photos/34803971/pexels-photo-34803971.jpeg" alt="هسته فناور" >
+        </div>
+        <div class="unit-details flex-fill">
+          <h2>اطلاعات هسته و واحد فناور</h2>
+          <table class="small-table">
+            <tr><td class="text-muted">نام هسته:</td><td>مهین وب هاست</td></tr>
+            <tr><td class="text-muted">موضوع فعالیت:</td><td>فناوری اطلاعات</td></tr>
+            <tr><td class="text-muted">نوع قرارداد:</td><td>اجاره‌ای</td></tr>
+            <tr><td class="text-muted">تاریخ قرارداد:</td><td>۱۴۰۴/۰۵/۲۵</td></tr>
+            <tr><td class="text-muted">تاریخ خروج:</td><td>۱۴۰۵/۰۵/۲۵</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- اعضا و نمودار خلاصه -->
+    
+      <div class="row g-2">
+        <div class="col-12 col-md-7">
+          <div class="card p-2">
+            <h6 class="mb-2">اسامی اعضای شرکت</h6>
+            <table class="small-table">
+              <tr><td class="text-muted">نام مدیر شرکت:</td><td>دکتر محمد حسن عالی</td></tr>
+              <tr><td class="text-muted">نام مدیر عامل:</td><td>دکتر علیرضا بابایی</td></tr>
+              <tr><td class="text-muted">نام رئیس هیأت مدیره:</td><td>مهندس حمیدرضا شکری</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-5">
+          <div class="card p-2 text-center">
+            <h6 class="mb-2">مجموع تعداد پرسنل</h6>
+            <svg class="chart-svg" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18" cy="18" r="16" fill="none" stroke="#e6e6e6" stroke-width="3"/>
+              <circle id="percentCircle" cx="18" cy="18" r="16" fill="none" stroke="#2b7cff" stroke-width="3"
+                stroke-dasharray="65 35" stroke-linecap="round" transform="rotate(-90 18 18)"/>
+            </svg>
+            <div class="chart-text">۴۵ نفر</div>
+            <div class="small text-muted">آقا: ۳۰ — خانم: ۱۵</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- هسته‌های مشابه — اسکرول افقی -->
+    <section class="mb-3">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <h6 class="mb-0">هسته‌ها و واحدهای فناور مشابه</h6>
+        
+      </div>
+
+      <div class="units-scroll mb-2" id="unitsScroll">
+        <div class="unit-card">
+          <img src="https://images.pexels.com/photos/792199/pexels-photo-792199.jpeg" alt="شرکت" >
+          <h6 class="mt-2 mb-1">شرکت مهین وب هاست</h6>
+          <small class="muted d-block"><strong>حوزه:</strong> تبلیغاتی</small>
+          <small class="muted d-block"><strong>سال:</strong> ۱۴۰۴</small>
+        </div>
+
+        <div class="unit-card">
+          <img src="https://images.pexels.com/photos/10948188/pexels-photo-10948188.jpeg" alt="شرکت" >
+          <h6 class="mt-2 mb-1">شرکت توسعه وب</h6>
+          <small class="muted d-block"><strong>حوزه:</strong> فناوری</small>
+          <small class="muted d-block"><strong>سال:</strong> ۱۴۰۳</small>
+        </div>
+
+        <div class="unit-card">
+          <img src="https://images.pexels.com/photos/6284359/pexels-photo-6284359.jpeg" alt="شرکت" >
+          <h6 class="mt-2 mb-1">شرکت نمونه</h6>
+          <small class="muted d-block"><strong>حوزه:</strong> تبلیغاتی</small>
+          <small class="muted d-block"><strong>سال:</strong> ۱۴۰۴</small>
+        </div>
+      </div>
+    </section>
+
+ <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="mb-2">
+        <i class="fa-brands fa-instagram mx-1"></i>
+        <i class="fa-brands fa-telegram mx-1"></i>
+        <i class="fa-brands fa-linkedin mx-1"></i>
+      </div>
+      <div style="font-size:.85rem; color:#6c757d">&copy; ۱۴۰۴ | کلیه حقوق محفوظ است.</div>
+    </div>
+  </footer>
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+   <script>
+    function debounce(fn, delay = 350) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), delay);
+  };
+}
+
+  function updateDateTime() {
+    const now = new Date();
+
+    const days = [
+      'یکشنبه',
+      'دوشنبه',
+      'سه‌شنبه',
+      'چهارشنبه',
+      'پنج‌شنبه',
+      'جمعه',
+      'شنبه'
+    ];
+
+    let dayName = days[now.getDay()];
+    let dateStr = now.toLocaleDateString('fa-IR');
+
+    // ساعت دو رقمی
+    let h = now.getHours().toString().padStart(2, '0');
+    let m = now.getMinutes().toString().padStart(2, '0');
+   
+
+    document.getElementById('date').textContent =
+      `${dayName} - ${dateStr} - ${h}:${m}`;
+  }
+
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
+
+    // نمونه: محاسبه stroke-dasharray برای دایره درصد بر اساس تعداد پرسنل (اینجا ثابت)
+    (function(){
+      // اگر خواستی درصد واقعی نشان بده میتونی این مقادیر را پویا کنی
+      const total = 100; // حداکثر فرضی
+      const value = 65;  // درصد فعلی (مثال)
+      const circle = document.getElementById('percentCircle');
+      if(circle){
+        const dash = (value / total) * 100;
+        const dashA = Math.max(0.01, Math.min(100, dash));
+        circle.setAttribute('stroke-dasharray', `${dashA} ${100-dashA}`);
+      }
+    })();
+
+    // بهبود اسکرول افقی برای بخش unit-slider: دکمه‌های لمسی
+    (function(){
+      const sc = document.getElementById('unitsScroll');
+      if(!sc) return;
+      sc.addEventListener('wheel', (e) => {
+        // برای چرخ موس اسکرول افقی
+        if (e.deltaY === 0) return;
+        sc.scrollBy({ left: e.deltaY, behavior: 'smooth' });
+      }, { passive:true });
+    })();
+  </script>
+</body>
+</html>
